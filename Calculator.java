@@ -10,7 +10,7 @@ public class Calculator {
         System.out.println("Please enter the second whole number");
         int num2 = scan.nextInt();
 
-        System.out.println("Would you like to add or subtract these numbers? Enter 1 for add, or 2 for subtract.");
+        System.out.println("Would you like to add or subtract these numbers? Enter 1 for add, or 2 for subtract, 3 for multiply, and 4 for divide.");
         int choice = scan.nextInt();
 
         int sum = 0;
@@ -21,8 +21,14 @@ public class Calculator {
         } else if (choice == 2) {
             sum = num1 - num2;
             System.out.println("The difference of the two numbers is: " + sum);
+        } else if (choice == 3) {
+            sum = num1*num2;
+            System.out.println("The product of the two numbers is: " + sum);
+        } else if (choice == 4) {
+            sum = num1/num2;
+            System.out.println("The quotient of the two numbers is: " + sum);
         } else {
-            System.out.println("Please enter 1 for add or 2 for subtract.");
+            System.out.println("Please enter 1 for add, or 2 for subtract, 3 for multiply, and 4 for divide.");
         }
 
         scan.close();
