@@ -10,9 +10,20 @@ public class Calculator {
         System.out.println("Please enter the second whole number");
         int num2 = scan.nextInt();
 
-        int sum = num1 + num2;
+        System.out.println("Would you like to add or subtract these numbers? Enter 1 for add, or 2 for subtract.");
+        int choice = scan.nextInt();
 
-        System.out.println("The sum of the two numbers is: " + sum);
+        int sum = 0;
+
+        if (choice == 1) {
+            sum = num1 + num2;
+            System.out.println("The sum of the two numbers is: " + sum);
+        } else if (choice == 2) {
+            sum = num1 - num2;
+            System.out.println("The difference of the two numbers is: " + sum);
+        } else {
+            System.out.println("Please enter 1 for add or 2 for subtract.");
+        }
 
         scan.close();
     }
