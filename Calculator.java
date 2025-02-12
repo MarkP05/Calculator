@@ -4,10 +4,10 @@ public class Calculator {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Please enter the first whole number");
+        System.out.println("Please enter the first number");
         float num1 = scan.nextInt();
 
-        System.out.println("Please enter the second whole number");
+        System.out.println("Please enter the second number");
         float num2 = scan.nextInt();
 
         System.out.println("Would you like to add or subtract these numbers? Enter 1 for add, or 2 for subtract, 3 for multiply, and 4 for divide.");
@@ -25,6 +25,9 @@ public class Calculator {
             sum = num1*num2;
             System.out.println("The product of the two numbers is: " + sum);
         } else if (choice == 4) {
+            if (num2 == 0) {
+                System.out.println("Error: Divide by Zero");
+            }
             sum = num1/num2;
             System.out.println("The quotient of the two numbers is: " + sum);
         } else {
